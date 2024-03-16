@@ -26,18 +26,15 @@ cachemean <- function(x, ...) {
         m
 }
 
-# Example usage
 # Create a special vector
 special_vector <- makeVector(1:10)
 
 # Calculate the mean using cachemean
-cachemean(special_vector)  # This will compute the mean
-cachemean(special_vector)  # This will use the cached mean
+cachemean(special_vector) 
+cachemean(special_vector)  
 
 # Let's change the vector data
 special_vector$set(11:20)
 
-# The cached mean will be cleared
-# So, next time we call cachemean, it will recompute the mean
 cachemean(special_vector)
 
